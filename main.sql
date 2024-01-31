@@ -9,22 +9,13 @@ CREATE TABLE students (
 );
 
 INSERT INTO students (id, first_name, middle_name, last_name, age, location)
-VALUES (1, 'MJ', '', 'Cruz', 32, 'Bulacan');
-
-INSERT INTO students (id, first_name, middle_name, last_name, age, location)
-VALUES (2, 'Richard', '', 'Custodio', 28, 'Marikina');
-
-INSERT INTO students (id, first_name, middle_name, last_name, age, location)
-VALUES (3, 'Jessico', '', 'Niluag', 37, 'Manila');
-
-INSERT INTO students (id, first_name, middle_name, last_name, age, location)
-VALUES (4, 'Mark', '', 'Militar', 31, 'Makati');
-
-INSERT INTO students (id, first_name, middle_name, last_name, age, location)
-VALUES (5, 'Gabrielle', '', 'Bonbon', 33, 'Pasig');
-
-INSERT INTO students (id, first_name, middle_name, last_name, age, location)
-VALUES (6, 'Cyrus', '', 'Torres', 30, 'Pampanga');
+VALUES 
+    (1, 'MJ', '', 'Cruz', 32, 'Bulacan'),
+    (2, 'Richard', '', 'Custodio', 28, 'Marikina'),
+    (3, 'Jessico', '', 'Niluag', 37, 'Manila'),
+    (4, 'Mark', '', 'Militar', 31, 'Makati'),
+    (5, 'Gabrielle', '', 'Bonbon', 33, 'Pasig'),
+    (6, 'Cyrus', '', 'Torres', 30, 'Pampanga');
 
 UPDATE students
 SET first_name = 'Ener',
