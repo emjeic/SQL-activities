@@ -1,5 +1,6 @@
+-- Activity 1
 CREATE TABLE students (
-    id integer PRIMARY KEY,
+    id integer PRIMARY KEY NOT NULL,
 	first_name character varying(255) NOT NULL,
 	middle_name character varying(255) NULL,
     last_name character varying(255) NOT NULL,
@@ -8,37 +9,42 @@ CREATE TABLE students (
 );
 
 INSERT INTO students (id, first_name, middle_name, last_name, age, location)
-VALUES (1, "MJ", "David", "Cruz", 32, "Bulacan", true);
+VALUES (1, 'MJ', '', 'Cruz', 32, 'Bulacan');
 
 INSERT INTO students (id, first_name, middle_name, last_name, age, location)
-VALUES (2, "Richard", "Santos", "Custodio", 28, "Marikina", true);
+VALUES (2, 'Richard', '', 'Custodio', 28, 'Marikina');
 
 INSERT INTO students (id, first_name, middle_name, last_name, age, location)
-VALUES (3, "Jessico", "Enriquez", "Niluag", 37, "Manila", true);
+VALUES (3, 'Jessico', '', 'Niluag', 37, 'Manila');
 
 INSERT INTO students (id, first_name, middle_name, last_name, age, location)
-VALUES (4, "Mark", "Palad", "Militar", 31, "Makati", true);
+VALUES (4, 'Mark', '', 'Militar', 31, 'Makati');
 
 INSERT INTO students (id, first_name, middle_name, last_name, age, location)
-VALUES (5, "Gabrielle", "Esquivel", "Bonbon", 33, "Pasig", true);
+VALUES (5, 'Gabrielle', '', 'Bonbon', 33, 'Pasig');
 
 INSERT INTO students (id, first_name, middle_name, last_name, age, location)
-VALUES (6, "Cyrus", "Yap", "Torres", 30, "Pampanga", true);
+VALUES (6, 'Cyrus', '', 'Torres', 30, 'Pampanga');
 
-UPDATE lessons
-SET first_name = "Ener",
-    middle_name = NULL,
-    last_name = "Cenina",
+UPDATE students
+SET first_name = 'Ener',
+	middle_name = 'Ingram',
+    last_name = 'Cenina',
     age = 29,
-    location = "Cavite"
+    location = 'Cavite'
 WHERE id = 1;
 
 DELETE FROM students
 WHERE id = 6;
+-- OR
+DELETE FROM students
+WHERE id = (SELECT MAX(id) FROM students);
 
+
+-- Activity 2
 SELECT COUNT(*) FROM students;
 
-SELECT FROM students
+SELECT * FROM students
 WHERE location = "Manila"
 
 SELECT AVG(age)
